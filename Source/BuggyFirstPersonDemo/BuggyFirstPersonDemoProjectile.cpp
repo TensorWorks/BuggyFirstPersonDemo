@@ -38,7 +38,7 @@ void ABuggyFirstPersonDemoProjectile::OnHit(UPrimitiveComponent* HitComp, AActor
 	{
 		if (OtherActor->ActorHasTag(FName(TEXT("BuggyCube")))) {
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Triggering a crash"));
-			unimplemented();
+			*(int*)0 = 0;
 		};
 
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
